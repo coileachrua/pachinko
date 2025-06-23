@@ -41,6 +41,7 @@
     {"id":{"name":"obj_floor","path":"objects/obj_floor/obj_floor.yy",},},
     {"id":{"name":"obj_pin","path":"objects/obj_pin/obj_pin.yy",},},
     {"id":{"name":"obj_static","path":"objects/obj_static/obj_static.yy",},},
+    {"id":{"name":"obj_title","path":"objects/obj_title/obj_title.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"spr_Block","path":"sprites/spr_Block/spr_Block.yy",},},
     {"id":{"name":"spr_Circle","path":"sprites/spr_Circle/spr_Circle.yy",},},
