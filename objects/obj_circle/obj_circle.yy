@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"obj_circle",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_circle",
   "overriddenProperties":[],
@@ -16,12 +18,12 @@
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.9,
-  "physicsFriction":0.5,
+  "physicsFriction":0.2,
   "physicsGroup":1,
   "physicsKinematic":false,
   "physicsLinearDamping":0.1,
   "physicsObject":true,
-  "physicsRestitution":0.5,
+  "physicsRestitution":0.8,
   "physicsSensor":false,
   "physicsShape":0,
   "physicsShapePoints":[
