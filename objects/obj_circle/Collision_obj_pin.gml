@@ -1,0 +1,1 @@
+audio_play_sound(short_click_7, 10, false );

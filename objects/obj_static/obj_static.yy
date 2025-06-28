@@ -9,8 +9,8 @@
   "name":"obj_static",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"abstract",
+    "path":"folders/Objects/abstract.yy",
   },
   "parentObjectId":null,
   "persistent":false,

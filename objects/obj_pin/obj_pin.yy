@@ -6,8 +6,8 @@
   "name":"obj_pin",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"real",
+    "path":"folders/Objects/real.yy",
   },
   "parentObjectId":{
     "name":"obj_static",
