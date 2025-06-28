@@ -1,3 +1,4 @@
+touching_floor = false;
 
 var fixture = physics_fixture_create();
 physics_fixture_set_circle_shape(fixture, sprite_width / 2);
