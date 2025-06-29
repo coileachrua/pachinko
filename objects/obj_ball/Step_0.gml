@@ -1,31 +1,10 @@
-time_accumulator += delta_time; // delta_time is in microseconds
+// Use physics-based collision check
+var is_colliding = physics_test_overlap(x, y + sprite_height / 2 + 1, 0, obj_floor);
 
-var is_colliding = place_meeting(x, y, obj_floor);
+var result_floor = check_collision_state(obj_floor, collision_state_floor, time_floor, interval_ms, spr_circle, spr_enter, spr_stay, spr_exit);
+collision_state_floor = result_floor[0];
+time_floor = result_floor[1];
 
-if (time_accumulator >= interval_ms * 1000) {
-    time_accumulator = 0;
-
-    show_debug_message("1 second passed");
-
-	switch (collision_state){
-    case CollisionState.STAY:
-        if (!is_colliding)
-        {
-            collision_state = CollisionState.EXIT;
-            sprite_index = spr_exit;
-        }
-        break;
-
-    case CollisionState.EXIT:
-        if (!is_colliding)
-        {
-            collision_state = CollisionState.NONE;
-            sprite_index = spr_circle;
-        }
-        break;
-}
-}
-
-
-
-
+var result_pin = check_collision_state(obj_pin, collision_state_pin, time_pin, interval_ms, spr_circle, spr_enter, spr_stay, spr_exit);
+collision_state_pin = result_pin[0];
+time_pin = result_pin[1];

@@ -7,3 +7,54 @@ enum CollisionState {
 
 	
 
+function check_collision_state(obj, current_state_ref, time_ref, interval_us, spr_none, spr_enter, spr_stay, spr_exit) {
+    time_ref += delta_time;
+    var is_colliding = physics_test_overlap(x, y + sprite_height / 2 + 1, 0, obj);
+
+    if (time_ref >= interval_us) {
+        time_ref = 0;
+
+        switch (current_state_ref) {
+            case CollisionState.NONE:
+                if (is_colliding) {
+                    current_state_ref = CollisionState.ENTER;
+                    sprite_index = spr_enter;
+                    show_debug_message("ENTER: " + string(obj));
+                }else {
+					show_debug_message("NOT COLLIDING, STAYING NONE: " + string(obj));
+				}	
+                break;
+
+            case CollisionState.ENTER:
+                current_state_ref = CollisionState.STAY;
+                sprite_index = spr_stay;
+                show_debug_message("STAY: " + string(obj));
+                break;
+
+            case CollisionState.STAY:
+                if (!is_colliding) {
+                    current_state_ref = CollisionState.EXIT;
+                    sprite_index = spr_exit;
+                    show_debug_message("EXIT: " + string(obj));
+                }
+				else {
+					show_debug_message("STILL COLLIDING, STAYING: " + string(obj));
+				}					
+                break;
+
+            case CollisionState.EXIT:
+                if (!is_colliding) {
+                    current_state_ref = CollisionState.NONE;
+                    sprite_index = spr_none;
+                    show_debug_message("NONE: " + string(obj));
+                } else {
+                    current_state_ref = CollisionState.ENTER;
+                    sprite_index = spr_enter;
+                    show_debug_message("RE-ENTER: " + string(obj));
+                }
+                break;
+        }
+    }
+
+    return [current_state_ref, time_ref];
+}
