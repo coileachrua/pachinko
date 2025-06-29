@@ -1,4 +1,9 @@
 
+collision_state = CollisionState.NONE;
+desired_sprite = spr_circle;
+sprite_index = desired_sprite;
+sprite_timer = 0;
+
 var fixture = physics_fixture_create();
 physics_fixture_set_circle_shape(fixture, sprite_width / 2);
 physics_fixture_set_density(fixture, 0.1);
