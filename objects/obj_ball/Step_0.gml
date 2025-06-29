@@ -36,7 +36,7 @@ for (var i = 0; i < array_length(all_balls); i++) {
     if (are_balls_touching(id, other_ball)) {
         if (state != CollisionState.STAY) {
             // Avoid overlapping sound playback
-            if (!audio_is_playing(short_click_6)) {
+            if (global.sfx_on && !audio_is_playing(short_click_6)) {
                 audio_play_sound(short_click_6, 1, false);
             }
             ds_map_set(ball_collision_state_map, other_ball, CollisionState.STAY);
