@@ -3,12 +3,12 @@ switch (collision_state)
     case CollisionState.NONE:
     case CollisionState.EXIT:
         collision_state = CollisionState.ENTER;
-        sprite_index = spr_enter;
+        desired_sprite = spr_enter;
         break;
 
     case CollisionState.ENTER:
         collision_state = CollisionState.STAY;
-        sprite_index = spr_stay;
+        desired_sprite = spr_stay;
         break;
 
     case CollisionState.STAY:
