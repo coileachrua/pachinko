@@ -12,6 +12,6 @@ if (mouse_check_button_pressed(mb_left)) {
     } else if (point_in_rectangle(mouse_x, mouse_y, x1, 480, x2, 530)) {
         global.sfx_on = !global.sfx_on;
     } else if (point_in_rectangle(mouse_x, mouse_y, x1, 580, x2, 630)) {
-        room_goto(Room1);
+        room_goto(MainMenuRoom);
     }
 }
