@@ -9,7 +9,11 @@ enum CollisionState {
 
 function check_collision_state(obj, current_state_ref, time_ref, interval_us, spr_none, spr_enter, spr_stay, spr_exit) {
     time_ref += delta_time;
-    var is_colliding = physics_test_overlap(x, y + sprite_height / 2 + 1, 0, obj);
+var is_colliding =
+    physics_test_overlap(x, y + sprite_height / 2 + 1, 0, obj) || // bottom
+    physics_test_overlap(x, y - sprite_height / 2 - 1, 0, obj) || // top
+    physics_test_overlap(x + sprite_width / 2 + 1, y, 0, obj) ||  // right
+    physics_test_overlap(x - sprite_width / 2 - 1, y, 0, obj);    // leftj);
 
     if (time_ref >= interval_us) {
         time_ref = 0;
@@ -19,9 +23,10 @@ function check_collision_state(obj, current_state_ref, time_ref, interval_us, sp
                 if (is_colliding) {
                     current_state_ref = CollisionState.ENTER;
                     sprite_index = spr_enter;
+					audio_play_sound(short_click_7, 1, false);
                     show_debug_message("ENTER: " + string(obj));
                 }else {
-					show_debug_message("NOT COLLIDING, STAYING NONE: " + string(obj));
+					
 				}	
                 break;
 

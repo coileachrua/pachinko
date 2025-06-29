@@ -1,5 +1,5 @@
 sprite_index = spr_circle;
-interval_ms = 250 * 100; // one second
+interval_ms = 250 * 100; 
 
 
 // Time and state tracking for floor
@@ -10,6 +10,7 @@ collision_state_floor = CollisionState.NONE;
 time_pin = 0;
 collision_state_pin = CollisionState.NONE;
 
+ball_collision_state_map = ds_map_create(); // key = other ID, value = state
 
 var fixture = physics_fixture_create();
 physics_fixture_set_circle_shape(fixture, sprite_width / 2);
