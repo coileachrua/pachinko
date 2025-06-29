@@ -4,3 +4,6 @@ enum CollisionState {
     STAY,
     EXIT
 }
+
+	
+
