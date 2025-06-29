@@ -50,6 +50,7 @@
     {"id":{"name":"obj_static","path":"objects/obj_static/obj_static.yy",},},
     {"id":{"name":"obj_title","path":"objects/obj_title/obj_title.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"CollisionState","path":"scripts/CollisionState/CollisionState.yy",},},
     {"id":{"name":"bounce","path":"sounds/bounce/bounce.yy",},},
     {"id":{"name":"phaser","path":"sounds/phaser/phaser.yy",},},
     {"id":{"name":"short_click_1","path":"sounds/short_click_1/short_click_1.yy",},},
