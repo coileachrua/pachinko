@@ -23,7 +23,9 @@ var is_colliding =
                 if (is_colliding) {
                     current_state_ref = CollisionState.ENTER;
                     sprite_index = spr_enter;
-					audio_play_sound(short_click_7, 1, false);
+                    if (global.sfx_on) {
+                        audio_play_sound(short_click_7, 1, false);
+                    }
                     show_debug_message("ENTER: " + string(obj));
                 }else {
 					

@@ -1,3 +1,8 @@
 global.game_started = false;
 global.level_complete = false;
-//audio_play_sound(bounce, 1, true);
+global.music_on = true;
+global.sfx_on = true;
+
+if (global.music_on) {
+    audio_play_sound(bounce, 1, true);
+}
