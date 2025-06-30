@@ -49,7 +49,11 @@
     {"id":{"name":"obj_pin","path":"objects/obj_pin/obj_pin.yy",},},
     {"id":{"name":"obj_static","path":"objects/obj_static/obj_static.yy",},},
     {"id":{"name":"obj_title","path":"objects/obj_title/obj_title.yy",},},
+    {"id":{"name":"obj_options_menu","path":"objects/obj_options_menu/obj_options_menu.yy",},},
+    {"id":{"name":"obj_main_menu","path":"objects/obj_main_menu/obj_main_menu.yy",},},
+    {"id":{"name":"MainMenuRoom","path":"rooms/MainMenuRoom/MainMenuRoom.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"OptionsRoom","path":"rooms/OptionsRoom/OptionsRoom.yy",},},
     {"id":{"name":"BallState","path":"scripts/BallState/BallState.yy",},},
     {"id":{"name":"CollisionState","path":"scripts/CollisionState/CollisionState.yy",},},
     {"id":{"name":"bounce","path":"sounds/bounce/bounce.yy",},},
@@ -74,7 +78,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"MainMenuRoom","path":"rooms/MainMenuRoom/MainMenuRoom.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"OptionsRoom","path":"rooms/OptionsRoom/OptionsRoom.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
