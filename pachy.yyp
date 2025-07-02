@@ -56,6 +56,7 @@
     {"id":{"name":"OptionsRoom","path":"rooms/OptionsRoom/OptionsRoom.yy",},},
     {"id":{"name":"BallState","path":"scripts/BallState/BallState.yy",},},
     {"id":{"name":"CollisionState","path":"scripts/CollisionState/CollisionState.yy",},},
+    {"id":{"name":"Options","path":"scripts/Options/Options.yy",},},
     {"id":{"name":"bounce","path":"sounds/bounce/bounce.yy",},},
     {"id":{"name":"phaser","path":"sounds/phaser/phaser.yy",},},
     {"id":{"name":"short_click_1","path":"sounds/short_click_1/short_click_1.yy",},},
