@@ -9,9 +9,12 @@ if (mouse_check_button_pressed(mb_left)) {
         } else {
             audio_stop_sound(bounce);
         }
+        save_options();
     } else if (point_in_rectangle(mouse_x, mouse_y, x1, 480, x2, 530)) {
         global.sfx_on = !global.sfx_on;
+        save_options();
     } else if (point_in_rectangle(mouse_x, mouse_y, x1, 580, x2, 630)) {
+        save_options();
         room_goto(MainMenuRoom);
     }
 }
