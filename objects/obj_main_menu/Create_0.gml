@@ -12,3 +12,8 @@ if (!variable_global_exists("level_complete")) {
 if (global.music_on) {
     audio_play_sound(bounce, 1, true);
 }
+
+// ensure the persistent controller exists for debug toggling
+if (!instance_exists(obj_controller)) {
+    instance_create_layer(0, 0, "Instances", obj_controller);
+}
